@@ -1,0 +1,305 @@
+/*2. В качестве фона на всех страницах установить цвет #f8f8f8.*/
+body {
+    background-color: #f8f8f8
+}
+
+/*b. Убрать маркеры списка.*/
+.link {
+    text-decoration: none;
+    color: #326B26;
+}
+
+/*a. Для всех ссылок меню задать определённый стиль. (Цвет текста, размер шрифта,
+начертание шрифта и т.д.)
+b. Убрать маркеры списка.*/
+.menu li {
+    list-style-type: none;
+    width: 70px;
+    height: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/*4. Страница “Подробное описание товара”
+a. Заголовки (Краткое описание товара, Характеристики, Подробное описание товара)
+i. Цвет текста черный.
+ii. Размер шрифта 18px;
+iii. Насыщенность шрифта 400. (font-weight);
+iv. установите цвет фона #eaeaea;*/
+
+.heading {
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #eaeaea;
+    
+}
+
+/*b. Для текста краткого описания товар.
+i. Цвет текста #707070;
+ii. Размер шрифта 14px.
+iii. Начертание шрифта italic. (font-style)
+iv. Высоту текста 16px (line-height);*/
+
+#shortdesc {
+    color: #707070;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 16px;  
+}
+
+/*c. Для текста подробного описания товара:
+i. Цвет текста #484343.
+ii. Размер шрифта 16px.
+iii. Насыщенность шрифта 400. (font-weight);
+iv. Высоту текста 24px (line-height);
+v. Расположение текста по левому краю (text-align)*/
+
+#fulldesc {
+    color: #484343;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
+
+/*d. Для списка внурти подраздела Характеристики товара
+i. задайте списку стили, отличные от всего остального текста.
+ii. *установите в качестве маркеров произвольные изображения*/
+
+.list {
+    color: darkolivegreen;
+    font-size: 15px;
+    line-height: 24px;
+    list-style-type: disc
+}
+
+/*5. Странице “Контакты”:
+a. Задать значения ширины и высоты для полей ввода.
+b. Задать стили для текста, внутри полей input. ( Цвет текста, размер шрифта и т.д.).
+c. Следите за тем, чтобы на странице всё выглядело гармонично, не выбирайте слишком
+резких цветов.*/
+
+input[type="text"],
+input[type="email"] {
+    color: #191970;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: sans-serif;
+    width: 300px;
+    height: 20px;
+    
+}
+
+textarea[name="msg"] {
+    color: #191970;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: sans-serif; 
+}
+
+input[type="submit"],
+input[type="reset"]
+{
+    font-size: 14px; 
+    font-weight: 600;
+    background-color: #3F852F;
+    color: white;
+    width: 100px;
+    height: 25px
+}
+
+
+/*УРОК 3
+
+1.При наведении на меню сайта цвет ссылок должен меняться на произвольный.*/
+.menu li a:hover {
+    color: limegreen;
+}
+
+/*4.При вводе текста в поле Email на странице контактной информации поменять цвет текста и цвет поля.*/
+input[type="email"]:focus {
+    color: darkgreen;
+    background-color: lightyellow;
+}
+
+/*5.При вводе текста в текстовые поля каждое слово должно начинаться с большой буквы, даже если пользователь будет вводить с маленькой.*/
+input[type="text"]:focus,
+textarea[name="msg"]:focus {
+    text-transform: capitalize;
+}
+
+/*7.При наведении на изображения в разделе просмотра товара, подробного описания, необходимо сделать так, чтобы рамка исчезала, но сама картинка при этом не должна смещаться, т.е., должна оставаться неподвижной.*/
+
+.product {
+    outline: 1px solid black;
+}
+.product:hover {
+    outline: none;
+}
+/*8.На странице просмотра товара каталога в каждом параграфе сделать первую букву первого слова другим шрифтом и размером.*/
+
+#shortdesc::first-letter,
+#fulldesc::first-letter,
+.text::first-letter {
+    font-size: 18px;
+    font-family: sans-serif
+}
+
+/*9. Создать таблицу размером не менее 4*5.*/
+.size_foot {
+    width: 400px;
+    height: 110px;
+    border: 1px solid #000;
+    border-collapse: collapse;
+}
+
+.size_cloth {
+    width: 400px;
+    height: 110px;
+    border: 1px solid #000;
+    border-collapse: collapse;
+}
+
+.size_foot td,
+.size_cloth td {
+    border: 1px solid #000;
+    text-align: center
+}
+
+/*11. *Задать высоту для верхней строки таблицы, отличную от всех остальных.*/
+
+.first_row {
+    height: 50px;
+    
+}
+
+/*Главная страница:
+1. Создать родительский блок с классом container, задать значение ширины и расположить блок по центру экрана.*/
+
+.container {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.text_main {
+    font-size: 18px;
+}
+
+/*2. Задать блоку с классом header значение высоты.
+3. Отодвинуть логотип от верхнего и левого края.
+4. Из вертикального меню сделать горизонтальное.
+5. Разместить меню справа от логотипа.
+6. Прижать меню к правому краю.*/
+
+.header {
+    height: 200px;
+    text-align: right;
+}
+
+.logo {
+    margin-top: 50px;
+    margin-left: 50px;
+    float: left;
+}
+
+.menu li {
+    display: inline-block;
+    width: 120px;
+    padding-top: 50px;
+    margin-right: 30px;
+}
+
+/* Footer (на всех страницах:)
+1. Задать высоту.
+2. Поменять цвет фона.
+3. Прижать текст «Все права защищены» к правому краю и отодвинуть от верхней и правой границы.*/
+
+.footer {
+    height: 60px;
+    text-align: right;
+    padding-top: 5px;
+    padding-right: 40px;
+    background-color: #6B2626;
+    color: white;
+}
+
+/*Страница просмотра товара каталога:
+1. Разместить краткое описание товара справа от картинки.
+2. Добавить кнопку «Купить».
+3. Присвоить эффект наведения и нажатия кнопке «Купить».*/
+
+.name {
+    float: left;
+    width: 60%;
+    height: 100px;
+    padding-top: 30px;
+}
+
+.buy {
+    padding-top: 60px;
+    height: 100px;
+    text-align: right;
+    padding-right: 20px;
+}
+
+input[type="button"]
+{
+    font-size: 18px; 
+    font-weight: 600;
+    background-color: #3F852F;
+    color: white;
+    width: 120px;
+    height: 40px
+}
+
+input[type="button"]:hover {
+    background-color: limegreen;
+}
+
+input[type="button"]:active {
+    background-color: grey;
+}
+
+.product {
+    clear: both;
+    float: left;
+}
+
+.shortdesc {
+    height: 200px;
+    overflow: hidden;
+    padding-left: 20px
+}
+
+.detail {
+    clear: both;
+    padding-top: 10px;
+}
+
+
+/*Страница каталога
+1. Создать блоки для картинки и ссылки на просмотр товара каталога.
+2. Расположить элементы каталога горизонтально.*/
+
+.catalog {
+    display: inline-block;
+}
+
+figcaption a {
+    font-weight: bold;
+    color: black;
+}
+
+/*Доделать то, что не успели в прошлых уроках.
+*Расположить элементы на ваше усмотрение. ***/
+
+
+/**Добавить фоновые изображения для header на каждой странице.*/
+
+.header {
+    background: url(../fon.jpg) no-repeat;
+    background-size: 100%;
+    
+}
